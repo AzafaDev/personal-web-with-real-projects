@@ -58,14 +58,14 @@ export const projects: Project[] = [
     category: "client",
     title: "SBKI — Training & Certification Website",
     eyebrow: "WordPress · PHP",
-    dek: "A custom WordPress theme for PT SBKI, an Indonesian professional certification body (project management, finance, data, sustainability). Covers the full lifecycle: migrating an existing site from its old host into a local dev environment, building a bespoke theme against the client's brand, and redeploying to the live domain.",
+    dek: "A custom WordPress theme for PT SBKI, an Indonesian professional certification body (project management, finance, data, sustainability). Covers the full lifecycle: migrating an existing site from its old host into a local dev environment, building a custom theme against the client's brand, and redeploying to the live domain.",
     role: "Solo — AI-assisted development, deployment & migration",
     timeframe: "Jul 2026",
     commits: "Custom theme, 14+ certification landing pages",
     status: "Live in production",
     liveDemo: "https://www.trainingsbki.co.id/",
     pitch:
-      "This one's worth framing honestly: I don't write PHP by hand, and I'm not claiming to. What I brought was the parts around the code — taking the client's existing WordPress site, migrating the database and files from its old host into a local (Local by Flywheel) environment I could actually work in, directing Claude Code through building a custom theme against the client's brand and content structure, and handling the redeploy back to the live domain without breaking anything. The value I actually delivered was requirements translation, review, and safe deployment/migration — the skill that's often missing even when someone does know PHP.",
+      "I don't write PHP by hand. What I brought here was the parts around the code — taking the client's existing WordPress site, migrating the database and files from its old host into a local (Local by Flywheel) environment I could actually work in, directing Claude Code through building a custom theme against the client's brand and content structure, and handling the redeploy back to the live domain without breaking anything. The value delivered was requirements translation, review, and safe deployment/migration.",
     stack: [
       {
         role: "Platform",
@@ -98,11 +98,11 @@ export const projects: Project[] = [
       },
       {
         heading: "Action",
-        body: "I pulled the site and database off the old host and stood it up locally in Local by Flywheel, then directed Claude Code through building a custom PHP theme (custom post types for instruktur/jadwal/portfolio, shared header/sidebar/CTA components reused across all 14+ program pages, ACF for structured content, async font loading and resource hints for performance). Worth being direct about: I don't write PHP by hand — my role was requirements translation, reviewing generated code against the brand and content model, and catching mismatches before they shipped. The infrastructure and migration judgment — moving a live client site with zero acceptable downtime — was mine end to end.",
+        body: "I pulled the site and database off the old host and stood it up locally in Local by Flywheel, then directed Claude Code through building a custom PHP theme (custom post types for instruktur/jadwal/portfolio, shared header/sidebar/CTA components reused across all 14+ program pages, ACF for structured content, async font loading and resource hints for performance). My role was requirements translation, reviewing generated code against the brand and content model, and catching mismatches before they shipped. The infrastructure and migration judgment — moving a live client site with zero acceptable downtime — was mine end to end.",
       },
       {
         heading: "Result",
-        body: "The rebuilt site is live in production at trainingsbki.co.id with all 14+ certification pages migrated and redeployed with no reported downtime or broken permalinks. It's a real, checkable outcome rather than a vanity metric — the honest scope of what I delivered here is migration and deployment reliability plus AI-directed theme development, not hand-written PHP expertise.",
+        body: "The rebuilt site is live in production at trainingsbki.co.id with all 14+ certification pages migrated and redeployed with no reported downtime or broken permalinks. The scope of what I delivered here is migration, deployment reliability, and AI-directed theme development — not hand-written PHP.",
       },
       {
         heading: "What it looks like",
@@ -135,7 +135,7 @@ export const projects: Project[] = [
     status: "Live in production",
     liveDemo: "https://pusatbesibeton.com/",
     pitch:
-      "Built this one from zero rather than inheriting existing infrastructure, unlike the SBKI project: fresh WordPress install, WooCommerce configured as the product engine, and the storefront designed in Elementor against the client's brand. The catalog itself — steel and concrete construction materials across several categories, each with sizes, thickness, and length specs — is the bulk of the real content work, not just theme styling. Worth being precise about scope: checkout is WooCommerce's cart used as a product list, not a live payment gateway — orders close over WhatsApp, which matches how this segment of B2B/B2C construction-materials sales actually happens in Indonesia rather than being a gap. The site's blog, which runs a steady cadence of city/product-targeted local-SEO posts, is maintained by a dedicated SEO specialist on the client's side, not part of what I built or maintain.",
+      "Built this one from zero rather than inheriting existing infrastructure, unlike the SBKI project: fresh WordPress install, WooCommerce configured as the product engine, and the storefront designed in Elementor against the client's brand. The catalog itself — steel and concrete construction materials across several categories, each with sizes, thickness, and length specs — is the bulk of the content work, not just theme styling. Checkout uses WooCommerce's cart as a product list rather than a live payment gateway — orders close over WhatsApp, which fits how B2B/B2C construction-materials sales typically work in Indonesia. The site's blog, which runs a steady cadence of city/product-targeted local-SEO posts, is maintained by a dedicated SEO specialist on the client's side, not part of what I built or maintain.",
     stack: [
       {
         role: "Platform",
@@ -158,7 +158,7 @@ export const projects: Project[] = [
       },
       {
         heading: "Action",
-        body: "Installed and configured WordPress with WooCommerce as the catalog/cart engine, built the product taxonomy (Besi Hollow, Besi Beton, Profil Besi, Plat, Baja, and more), and populated it with individual product listings carrying real specs — dimensions, thickness, length — rather than generic placeholder entries. Designed the storefront pages (home, shop grid with category/sort filtering, single product pages) in Elementor. Wired WooCommerce's cart to function as an order-collection step rather than a payment checkout, with a persistent WhatsApp click-to-chat widget for closing the sale — the right call for a B2B/B2C construction-materials business where price negotiation and delivery logistics happen over chat, not a fully self-serve checkout.",
+        body: "Installed and configured WordPress with WooCommerce as the catalog/cart engine, built the product taxonomy (Besi Hollow, Besi Beton, Profil Besi, Plat, Baja, and more), and populated it with individual product listings carrying specs — dimensions, thickness, length — instead of generic placeholder entries. Designed the storefront pages (home, shop grid with category/sort filtering, single product pages) in Elementor. Wired WooCommerce's cart to function as an order-collection step rather than a payment checkout, with a persistent WhatsApp click-to-chat widget for closing the sale — the right call for a B2B/B2C construction-materials business where price negotiation and delivery logistics happen over chat, not a fully self-serve checkout.",
       },
       {
         heading: "Result",
@@ -218,7 +218,7 @@ export const projects: Project[] = [
       },
       {
         heading: "Action",
-        body: "Installed and configured WordPress with WooCommerce as the catalog/cart engine, built out the product taxonomy (Besi Profil, Besi Hollow Galvanis, Floordeck/Bondek, Angkur Baja, Expanded Metal, and more), and populated it with individual listings carrying real specs and pricing rather than placeholders. Designed the storefront pages (home, shop grid with search/category filtering, single product pages) in Elementor, and wired the cart to function as an order-collection step rather than a payment checkout, with direct contact for closing the sale — the same fit-for-purpose pattern as other B2B/B2C construction-materials clients in this niche.",
+        body: "Installed and configured WordPress with WooCommerce as the catalog/cart engine, built out the product taxonomy (Besi Profil, Besi Hollow Galvanis, Floordeck/Bondek, Angkur Baja, Expanded Metal, and more), and populated it with individual listings carrying specs and pricing instead of placeholders. Designed the storefront pages (home, shop grid with search/category filtering, single product pages) in Elementor, and wired the cart to function as an order-collection step rather than a payment checkout, with direct contact for closing the sale — the same fit-for-purpose pattern as other B2B/B2C construction-materials clients in this niche.",
       },
       {
         heading: "Result",
@@ -255,7 +255,7 @@ export const projects: Project[] = [
     status: "Live in production",
     liveDemo: "https://suryagemilangaluminium.com/",
     pitch:
-      "A straightforward company profile build on WordPress with Elementor — no custom theme code, no e-commerce. The client sells aluminum doors, windows, and frames (kusen, pintu, jendela) and has been operating since 2009; the site's job is to establish credibility and route leads to WhatsApp, not to sell online. Worth being precise about scope: SEO and Google Ads are run by a dedicated specialist on the client's side, not something I built or maintain.",
+      "A straightforward company profile build on WordPress with Elementor — no custom theme code, no e-commerce. The client sells aluminum doors, windows, and frames (kusen, pintu, jendela) and has been operating since 2009; the site's job is to establish credibility and route leads to WhatsApp, not to sell online. SEO and Google Ads are run by a dedicated specialist on the client's side, not something I built or maintain.",
     stack: [
       {
         role: "Platform",
@@ -307,7 +307,7 @@ export const projects: Project[] = [
     category: "no-client",
     title: "Laundry Management Platform",
     eyebrow: "Go · React · TypeScript",
-    dek: "A full-stack, multi-outlet laundry operations system — order pipeline, driver dispatch, payments, attendance, and admin reporting — built as a from-scratch Go backend paired with a React/TypeScript frontend, with real fixes for race conditions and security gaps found along the way.",
+    dek: "A full-stack, multi-outlet laundry operations system — order pipeline, driver dispatch, payments, attendance, and admin reporting — built as a from-scratch Go backend paired with a React/TypeScript frontend, with fixes for race conditions and security gaps found along the way.",
     role: "Solo — backend & frontend",
     timeframe: "Jul 9 – Jul 19, 2026",
     commits: "106 backend · 107 frontend",
@@ -316,7 +316,7 @@ export const projects: Project[] = [
     repoBackend: "https://github.com/AzafaDev/laundry-app-golang",
     repoFrontend: "https://github.com/AzafaDev/laundry-app-typescript-react",
     pitch:
-      "Started as a 1:1 port of a working Node.js/Express/Prisma laundry backend, then grew into an exercise in doing the same domain better in Go: replacing ad-hoc concurrency handling with proper optimistic-concurrency SQL patterns, swapping Socket.IO for a lighter SSE implementation, and closing real security gaps (CSRF, rate limiting, structured error responses) that existed in the original. Every non-trivial change was verified two ways — automated tests, and live testing against a running server — and that's genuinely how three real race conditions got caught, not by reading the code.",
+      "Started as a port of a working Node.js/Express/Prisma laundry operations backend into Go — order pipeline, driver dispatch, payments, attendance — with a React/TypeScript frontend built alongside it. Concurrency-sensitive operations use optimistic-concurrency SQL patterns instead of locks, and real-time events run over a custom SSE implementation instead of Socket.IO. Every non-trivial change was checked two ways: automated integration tests and manual testing against a running server. Built with Claude Code as the implementation partner — I made the architecture and technical decisions (Go + Gin over a framework-heavy alternative, optimistic-concurrency SQL instead of locks, SSE instead of Socket.IO), directed the implementation, and did the testing and debugging myself, including tracking down the three race conditions through live testing.",
     stack: [
       {
         role: "Backend",
@@ -365,7 +365,7 @@ export const projects: Project[] = [
       },
       {
         heading: "Result",
-        body: "Shipped and live in production at app.laundry-app-api.my.id, 106 backend + 107 frontend commits over an 11-day build. The live-testing discipline caught three genuine race conditions — driver task double-claiming, payment webhook idempotency, and a worker/payment station race — that code review alone had missed, which is the concrete evidence the concurrency work was necessary rather than defensive over-engineering. Personal-project caveat, stated plainly: there's no client or user base to report satisfaction metrics from — the result here is a working, race-tested system with a specific, checkable list of bugs it does not have.",
+        body: "Shipped and live in production at app.laundry-app-api.my.id, 106 backend and 107 frontend commits over an 11-day build. As a personal project, there's no client or user base to report on — the result is a working system with a specific, checkable list of what it does and doesn't handle, verified through automated tests and manual testing against a running server.",
       },
       {
         heading: "What it looks like",
@@ -421,10 +421,10 @@ export const projects: Project[] = [
         ],
       },
       {
-        heading: "Engineering decisions worth pointing out",
-        body: "These are the parts of the project that say more than \"I built a CRUD app\" — good material for interview talking points.\n\n• Optimistic concurrency instead of locks. Every racy state transition (order status changes, driver task claims, payment confirmation) uses a SQL UPDATE ... WHERE status = $expected pattern — the loser gets zero rows affected and a clean 409, no lock needed.\n\n• SSE over WebSocket. Every real-time event in the system is server→client only, so a full WebSocket library was unnecessary complexity. A plain channel-based pub/sub over stdlib http.Flusher covers it, with room semantics (user:<id>, role:<role>, outlet:<id>).\n\n• CSRF via double-submit cookie. SameSite=None cookies (required for a cross-origin frontend) disable the browser's built-in CSRF protection — closed with a non-httpOnly token cookie echoed back in a header and checked with a constant-time compare.\n\n• Tiered rate limiting. Per-IP token buckets: a generous global baseline, a strict login limiter that only counts failed attempts, and a mid-strictness tier for other auth endpoints.\n\n• Timezone correctness. Attendance/shift logic runs in Asia/Jakarta civil time via a dedicated helper, avoiding the classic bug where truncating to 24h silently operates on epoch time instead of local wall-clock date.\n\n• Role-based routing, not one auth check. Eight dedicated route guards (customer, worker, driver, outlet admin, super admin, guest, ...) so each role only sees what it's authorized for.",
+        heading: "Technical notes",
+        body: "A few implementation details from the build:\n\n• Optimistic concurrency instead of locks. Every racy state transition (order status changes, driver task claims, payment confirmation) uses a SQL UPDATE ... WHERE status = $expected pattern — the loser gets zero rows affected and a clean 409, no lock needed.\n\n• SSE over WebSocket. Every real-time event in the system is server→client only, so a full WebSocket library was unnecessary complexity. A plain channel-based pub/sub over stdlib http.Flusher covers it, with room semantics (user:<id>, role:<role>, outlet:<id>).\n\n• CSRF via double-submit cookie. SameSite=None cookies (required for a cross-origin frontend) disable the browser's built-in CSRF protection — closed with a non-httpOnly token cookie echoed back in a header and checked with a constant-time compare.\n\n• Tiered rate limiting. Per-IP token buckets: a generous global baseline, a strict login limiter that only counts failed attempts, and a mid-strictness tier for other auth endpoints.\n\n• Timezone correctness. Attendance/shift logic runs in Asia/Jakarta civil time via a dedicated helper, avoiding the classic bug where truncating to 24h silently operates on epoch time instead of local wall-clock date.\n\n• Role-based routing, not one auth check. Eight dedicated route guards (customer, worker, driver, outlet admin, super admin, guest, ...) so each role only sees what it's authorized for.",
         highlight:
-          "Three genuine race conditions — driver task double-claiming, payment webhook idempotency, and a worker/payment station race — were only caught by live-testing concurrent requests against a running server, not by code review. Worth mentioning explicitly: it shows the testing discipline, not just the fix.",
+          "Three race conditions surfaced this way during development — driver task double-claiming, payment webhook idempotency, and a worker/payment station race — caught through concurrent-request testing against a running server rather than code review alone.",
       },
       {
         heading: "Domain coverage",
@@ -432,7 +432,7 @@ export const projects: Project[] = [
       },
       {
         heading: "Testing & deployment",
-        body: "Backend tests run as real integration tests against a live Postgres instance (not mocks), including concurrency regression tests that run multiple goroutines against the same resource under Go's race detector and assert exactly one winner.\n\nDeployed on a single 2 vCPU / 2GB VPS, no containers: Caddy (auto TLS) → Go binary under systemd → Postgres, all on localhost except Caddy. Frontend on Vercel. Deploys are manual (git pull && go build && systemctl restart) — no CI/CD yet, noted as a known limitation rather than glossed over.",
+        body: "Backend tests run as real integration tests against a live Postgres instance (not mocks), including concurrency regression tests that run multiple goroutines against the same resource under Go's race detector and assert exactly one winner.\n\nDeployed on a single 2 vCPU / 2GB VPS, no containers: Caddy (auto TLS) → Go binary under systemd → Postgres, all on localhost except Caddy. Frontend on Vercel. Deploys are manual (git pull && go build && systemctl restart) — no CI/CD yet.",
       },
     ],
     demoAccounts: {
@@ -462,7 +462,7 @@ export const projects: Project[] = [
     liveDemo: "https://company-profile-challange.vercel.app/",
     repo: "https://github.com/AzafaDev/company-profile-challange",
     pitch:
-      "Worth being upfront: the brief was a set code challenge from Purwadhika's bootcamp, not scope I picked myself — but this was an individual assignment, and the build itself (Payload schema, page structure, CMS wiring, styling) is mine end to end, same as the rest of this portfolio's non-team projects. Separately, and later: the original deployment and database had been torn down and sat dormant, so I brought it back — diagnosed a Next.js/Payload peer-dependency conflict blocking install, removed a dead dependency that was silently causing it, provisioned a fresh Postgres database, fixed a real DB-connectivity failure that turned out to be a Neon account/project-level issue rather than a code bug, reseeded demo content, and then checked the rebuilt site against the original assignment brief itself — which turned up a real gap: the spec required a public-facing Login and Create Blog page, and the live site only had Payload's own admin panel. Built both from scratch against Payload's REST auth before calling it done.",
+      "The brief was a set code challenge from Purwadhika's bootcamp — an individual assignment, with the build itself (Payload schema, page structure, CMS wiring, styling) done solo from an empty repo. Built with Claude Code as the implementation partner for the Payload schema and page structure — my role was the CMS design decisions, content modeling, and later, independently, diagnosing and fixing the dependency conflicts, database issue, and the missing Login/Create Blog pages found by re-checking the build against the brief. Separately, and later: the original deployment and database had been torn down and sat dormant, so I brought it back — diagnosed a Next.js/Payload peer-dependency conflict blocking install, removed a dead dependency that was silently causing it, provisioned a fresh Postgres database, fixed a DB-connectivity failure that turned out to be a Neon account/project-level issue, not a code bug, reseeded demo content, and then checked the rebuilt site against the original assignment brief itself — which turned up a gap: the spec required a public-facing Login and Create Blog page, and the live site only had Payload's own admin panel. Built both from scratch against Payload's REST auth before calling it done.",
     stack: [
       {
         role: "Framework & CMS",
@@ -494,15 +494,15 @@ export const projects: Project[] = [
       },
       {
         heading: "Task",
-        body: "Get the project running locally again, fix whatever was actually broken rather than papering over it, provision a real database, verify the original build actually satisfies the assignment brief, and get it back to a live, checkable deployment with working demo content — the kind of state a repo should be in before anyone treats it as a portfolio piece.",
+        body: "Get the project running locally again, fix whatever was actually broken rather than papering over it, provision a real database, verify the original build satisfies the assignment brief, and get it back to a live, checkable deployment with working demo content — the kind of state a repo should be in before anyone treats it as a portfolio piece.",
       },
       {
         heading: "Action",
-        body: "`npm install` failed on a genuine peer-dependency conflict: package.json pinned next@16.1.6, but @payloadcms/next@3.77.0 required next >=16.2.0 — bumped the version instead of forcing install past it. That surfaced a second conflict from @pemol/payload-cloudinary, a dependency that turned out to be referenced nowhere in the codebase (only Vercel Blob storage was actually wired up in payload.config.ts) — dead weight left over from an earlier experiment, removed outright. Provisioned a fresh Neon Postgres database and wrote a real .env.example (DATABASE_URL, PAYLOAD_SECRET, NEXT_PUBLIC_SERVER_URL, BLOB_READ_WRITE_TOKEN) — none of which had been documented anywhere. The admin panel then failed with a Postgres connection timeout that looked, at first, like it could be my own network — ruled that out methodically: raw TCP tests, a second network, a second Neon account, cross-checked against Neon's own documented failure modes, and narrowed it to a Neon account/project-level connectivity issue rather than anything in the code. Once resolved, seeded the CMS with real demo content (an admin user, uploaded media, 11 varied blog posts across categories) through Payload's REST API rather than leaving the live demo empty, then redeployed to Vercel. Before calling it finished, went back to the actual assignment document rather than trusting the existing repo's scope — it specifies seven required pages, including a public Login and an auth-gated Create Blog page. Neither existed; the site's only \"login\" was Payload's own admin panel, which isn't the same feature. Built a real /login page against Payload's cookie-based auth, and a /create-blog page that checks the session client-side, redirects unauthenticated visitors to /login, and on submit uploads a cover image before creating the post through Payload's REST API — verified end-to-end with cookie-authenticated requests before wiring up the UI, then again through the actual form.",
+        body: "`npm install` failed on a genuine peer-dependency conflict: package.json pinned next@16.1.6, but @payloadcms/next@3.77.0 required next >=16.2.0 — bumped the version instead of forcing install past it. That surfaced a second conflict from @pemol/payload-cloudinary, a dependency that turned out to be referenced nowhere in the codebase (only Vercel Blob storage was actually wired up in payload.config.ts) — dead weight left over from an earlier experiment, removed outright. Provisioned a fresh Neon Postgres database and wrote a real .env.example (DATABASE_URL, PAYLOAD_SECRET, NEXT_PUBLIC_SERVER_URL, BLOB_READ_WRITE_TOKEN) — none of which had been documented anywhere. The admin panel then failed with a Postgres connection timeout that looked, at first, like it could be my own network — ruled that out methodically: raw TCP tests, a second network, a second Neon account, cross-checked against Neon's own documented failure modes, and narrowed it to a Neon account/project-level connectivity issue, not anything in the code. Once resolved, seeded the CMS with real demo content (an admin user, uploaded media, 11 varied blog posts across categories) through Payload's REST API rather than leaving the live demo empty, then redeployed to Vercel. Before calling it finished, went back to the actual assignment document rather than trusting the existing repo's scope — it specifies seven required pages, including a public Login and an auth-gated Create Blog page. Neither existed; the site's only \"login\" was Payload's own admin panel, which isn't the same feature. Built a real /login page against Payload's cookie-based auth, and a /create-blog page that checks the session client-side, redirects unauthenticated visitors to /login, and on submit uploads a cover image before creating the post through Payload's REST API — verified end-to-end with cookie-authenticated requests before wiring up the UI, then again through the actual form.",
       },
       {
         heading: "Result",
-        body: "Live and checkable at the URL above, with a working admin panel, a populated blog, and both required auth pages now present rather than a bare scaffold or a partially-satisfied brief. Two layers of work here, both mine: the original build (Payload schema, page implementation, CMS wiring) done solo against the assignment brief, and later, independently, reviving a dead repo (dependency conflicts, undocumented env vars, a real infra failure) and closing a real gap I found by re-checking my own build against the brief, then shipping it back to production rather than leaving it as a broken or incomplete artifact.",
+        body: "Live and checkable at the URL above, with a working admin panel, a populated blog, and both required auth pages now present rather than a bare scaffold or a partially-satisfied brief. Two phases of work: the original build against the assignment brief, and later, separately, reviving a dormant repo (dependency conflicts, undocumented env vars, an infra failure) and closing a gap found by re-checking the build against the brief.",
       },
       {
         heading: "What it looks like",
@@ -536,7 +536,7 @@ export const projects: Project[] = [
     liveDemo: "https://kinetix-events.vercel.app/",
     repo: "https://github.com/AzafaDev/mini-project",
     pitch:
-      "This was a scoped bootcamp mini-project done with one teammate, not solo — worth being upfront about that rather than presenting it as an individual build. I carried backend and most of the frontend; my teammate contributed a smaller share. The MVP brief specified event discovery/creation, a full transaction lifecycle with vouchers/coupons/points, a referral program, event reviews, and an organizer dashboard — all of it shipped and is live and checkable on the deployed app: the event detail page shows aggregate ratings and review counts pulled from real data, and organizer profiles roll those up across all their events.",
+      "This was a scoped bootcamp mini-project done with one teammate, not solo. I carried backend and most of the frontend; my teammate contributed a smaller share. Built with Claude Code assisting on implementation across the backend and frontend I owned — my contribution was the module design (auth, events/reviews, transactions, discounts/points), API structure, and the testing/debugging across that scope. The MVP brief specified event discovery/creation, a full transaction lifecycle with vouchers/coupons/points, a referral program, event reviews, and an organizer dashboard — all of it shipped and is live and checkable on the deployed app: the event detail page shows aggregate ratings and review counts pulled from real data, and organizer profiles roll those up across all their events.",
     stack: [
       {
         role: "Backend",
@@ -580,7 +580,7 @@ export const projects: Project[] = [
       },
       {
         heading: "Result",
-        body: "Live and checkable at the URL above. The full MVP brief shipped: discovery/browsing/search, event creation with tiered pricing, the full transaction state machine with rollback, vouchers/coupons/points/referrals, event reviews with aggregate ratings surfaced on both event and organizer pages, and an organizer dashboard with attendee lists and revenue charts. One honest gap: there's a `vitest` test script wired up in package.json but zero test files in the repo — untested rather than broken. And this was a two-person build, not solo, which the README's framing glosses over but this one doesn't.",
+        body: "Live and checkable at the URL above. The full MVP brief shipped: discovery/browsing/search, event creation with tiered pricing, the full transaction state machine with rollback, vouchers/coupons/points/referrals, event reviews with aggregate ratings surfaced on both event and organizer pages, and an organizer dashboard with attendee lists and revenue charts. One gap: there's a `vitest` test script wired up in package.json but zero test files in the repo.",
       },
       {
         heading: "What it looks like",
