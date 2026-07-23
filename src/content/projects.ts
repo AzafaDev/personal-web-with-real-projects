@@ -316,7 +316,7 @@ export const projects: Project[] = [
     repoBackend: "https://github.com/AzafaDev/laundry-app-golang",
     repoFrontend: "https://github.com/AzafaDev/laundry-app-typescript-react",
     pitch:
-      "Started as a port of a working Node.js/Express/Prisma laundry operations backend into Go — order pipeline, driver dispatch, payments, attendance — with a React/TypeScript frontend built alongside it. Built with Claude Code as the implementation partner — I made the architecture and technical decisions (Go + Gin, optimistic-concurrency SQL instead of locks, SSE instead of Socket.IO), directed the implementation, and did the testing and debugging myself. Concurrency-sensitive operations use optimistic-concurrency SQL patterns instead of locks, and real-time events run over a custom SSE implementation instead of Socket.IO. Every non-trivial change was checked two ways: automated integration tests and manual testing against a running server.",
+      "Started as a port of a working Node.js/Express/Prisma laundry operations backend into Go — order pipeline, driver dispatch, payments, attendance — with a React/TypeScript frontend built alongside it. Built with Claude Code as the implementation partner — I made the architecture and technical decisions (Go + Gin, optimistic-concurrency SQL instead of locks, SSE instead of Socket.IO), directed the implementation, and did the testing and debugging myself. Every non-trivial change was checked two ways: automated integration tests and manual testing against a running server.",
     stack: [
       {
         role: "Backend",
