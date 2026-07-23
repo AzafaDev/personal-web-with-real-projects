@@ -90,7 +90,7 @@ export const projects: Project[] = [
     sections: [
       {
         heading: "Situation",
-        body: "PT SBKI, an Indonesian professional certification body (project management, finance, data, sustainability), had an existing WordPress site on an old host that needed a bespoke theme rebuild and a move to new infrastructure — without losing content, permalinks, or uptime the client would notice.",
+        body: "PT SBKI, an Indonesian professional certification body (project management, finance, data, sustainability), had an existing WordPress site on an old host that needed a custom theme rebuild and a move to new infrastructure — without losing content, permalinks, or uptime the client would notice.",
       },
       {
         heading: "Task",
@@ -316,7 +316,7 @@ export const projects: Project[] = [
     repoBackend: "https://github.com/AzafaDev/laundry-app-golang",
     repoFrontend: "https://github.com/AzafaDev/laundry-app-typescript-react",
     pitch:
-      "Started as a port of a working Node.js/Express/Prisma laundry operations backend into Go — order pipeline, driver dispatch, payments, attendance — with a React/TypeScript frontend built alongside it. Concurrency-sensitive operations use optimistic-concurrency SQL patterns instead of locks, and real-time events run over a custom SSE implementation instead of Socket.IO. Every non-trivial change was checked two ways: automated integration tests and manual testing against a running server. Built with Claude Code as the implementation partner — I made the architecture and technical decisions (Go + Gin over a framework-heavy alternative, optimistic-concurrency SQL instead of locks, SSE instead of Socket.IO), directed the implementation, and did the testing and debugging myself, including tracking down the three race conditions through live testing.",
+      "Started as a port of a working Node.js/Express/Prisma laundry operations backend into Go — order pipeline, driver dispatch, payments, attendance — with a React/TypeScript frontend built alongside it. Built with Claude Code as the implementation partner — I made the architecture and technical decisions (Go + Gin, optimistic-concurrency SQL instead of locks, SSE instead of Socket.IO), directed the implementation, and did the testing and debugging myself. Concurrency-sensitive operations use optimistic-concurrency SQL patterns instead of locks, and real-time events run over a custom SSE implementation instead of Socket.IO. Every non-trivial change was checked two ways: automated integration tests and manual testing against a running server.",
     stack: [
       {
         role: "Backend",
@@ -365,7 +365,7 @@ export const projects: Project[] = [
       },
       {
         heading: "Result",
-        body: "Shipped and live in production at app.laundry-app-api.my.id, 106 backend and 107 frontend commits over an 11-day build. As a personal project, there's no client or user base to report on — the result is a working system with a specific, checkable list of what it does and doesn't handle, verified through automated tests and manual testing against a running server.",
+        body: "Shipped and live in production at app.laundry-app-api.my.id, 106 backend and 107 frontend commits over an 11-day build. As a personal project, there's no client or user base to report on — the result is a working system with a specific list of what it does and doesn't handle, verified through automated tests and manual testing against a running server. Three race conditions surfaced during development this way — driver task double-claiming, payment webhook idempotency, and a worker/payment station race — caught through concurrent-request testing against a running server rather than code review alone.",
       },
       {
         heading: "What it looks like",
@@ -423,8 +423,6 @@ export const projects: Project[] = [
       {
         heading: "Technical notes",
         body: "A few implementation details from the build:\n\n• Optimistic concurrency instead of locks. Every racy state transition (order status changes, driver task claims, payment confirmation) uses a SQL UPDATE ... WHERE status = $expected pattern — the loser gets zero rows affected and a clean 409, no lock needed.\n\n• SSE over WebSocket. Every real-time event in the system is server→client only, so a full WebSocket library was unnecessary complexity. A plain channel-based pub/sub over stdlib http.Flusher covers it, with room semantics (user:<id>, role:<role>, outlet:<id>).\n\n• CSRF via double-submit cookie. SameSite=None cookies (required for a cross-origin frontend) disable the browser's built-in CSRF protection — closed with a non-httpOnly token cookie echoed back in a header and checked with a constant-time compare.\n\n• Tiered rate limiting. Per-IP token buckets: a generous global baseline, a strict login limiter that only counts failed attempts, and a mid-strictness tier for other auth endpoints.\n\n• Timezone correctness. Attendance/shift logic runs in Asia/Jakarta civil time via a dedicated helper, avoiding the classic bug where truncating to 24h silently operates on epoch time instead of local wall-clock date.\n\n• Role-based routing, not one auth check. Eight dedicated route guards (customer, worker, driver, outlet admin, super admin, guest, ...) so each role only sees what it's authorized for.",
-        highlight:
-          "Three race conditions surfaced this way during development — driver task double-claiming, payment webhook idempotency, and a worker/payment station race — caught through concurrent-request testing against a running server rather than code review alone.",
       },
       {
         heading: "Domain coverage",
@@ -462,7 +460,7 @@ export const projects: Project[] = [
     liveDemo: "https://company-profile-challange.vercel.app/",
     repo: "https://github.com/AzafaDev/company-profile-challange",
     pitch:
-      "The brief was a set code challenge from Purwadhika's bootcamp — an individual assignment, with the build itself (Payload schema, page structure, CMS wiring, styling) done solo from an empty repo. Built with Claude Code as the implementation partner for the Payload schema and page structure — my role was the CMS design decisions, content modeling, and later, independently, diagnosing and fixing the dependency conflicts, database issue, and the missing Login/Create Blog pages found by re-checking the build against the brief. Separately, and later: the original deployment and database had been torn down and sat dormant, so I brought it back — diagnosed a Next.js/Payload peer-dependency conflict blocking install, removed a dead dependency that was silently causing it, provisioned a fresh Postgres database, fixed a DB-connectivity failure that turned out to be a Neon account/project-level issue, not a code bug, reseeded demo content, and then checked the rebuilt site against the original assignment brief itself — which turned up a gap: the spec required a public-facing Login and Create Blog page, and the live site only had Payload's own admin panel. Built both from scratch against Payload's REST auth before calling it done.",
+      "The brief was a set code challenge from Purwadhika's bootcamp — an individual assignment. The Payload CMS setup follows patterns learned from a tutorial rather than being designed from scratch, and Gemini was used for the visual design direction. The page structure, CMS wiring, and later the independent debugging (dependency conflicts, database issue, the missing Login/Create Blog pages) are mine. Separately, and later: the original deployment and database had been torn down and sat dormant, so I brought it back — diagnosed a Next.js/Payload peer-dependency conflict blocking install, removed a dead dependency that was silently causing it, provisioned a fresh Postgres database, fixed a DB-connectivity failure that turned out to be a Neon account/project-level issue, not a code bug, reseeded demo content, and then checked the rebuilt site against the original assignment brief itself — which turned up a gap: the spec required a public-facing Login and Create Blog page, and the live site only had Payload's own admin panel. Built both from scratch against Payload's REST auth before calling it done.",
     stack: [
       {
         role: "Framework & CMS",
@@ -536,7 +534,7 @@ export const projects: Project[] = [
     liveDemo: "https://kinetix-events.vercel.app/",
     repo: "https://github.com/AzafaDev/mini-project",
     pitch:
-      "This was a scoped bootcamp mini-project done with one teammate, not solo. I carried backend and most of the frontend; my teammate contributed a smaller share. Built with Claude Code assisting on implementation across the backend and frontend I owned — my contribution was the module design (auth, events/reviews, transactions, discounts/points), API structure, and the testing/debugging across that scope. The MVP brief specified event discovery/creation, a full transaction lifecycle with vouchers/coupons/points, a referral program, event reviews, and an organizer dashboard — all of it shipped and is live and checkable on the deployed app: the event detail page shows aggregate ratings and review counts pulled from real data, and organizer profiles roll those up across all their events.",
+      "This was a scoped bootcamp mini-project done with one teammate, not solo. I carried backend and most of the frontend; my teammate contributed a smaller share. Built with Claude Code assisting on implementation across the scope I owned — my contribution was the module design (auth, events/reviews, transactions, discounts/points), API structure, and the testing/debugging. The MVP brief specified event discovery/creation, a full transaction lifecycle with vouchers/coupons/points, a referral program, event reviews, and an organizer dashboard — all of it shipped and is live and checkable on the deployed app: the event detail page shows aggregate ratings and review counts pulled from real data, and organizer profiles roll those up across all their events.",
     stack: [
       {
         role: "Backend",
