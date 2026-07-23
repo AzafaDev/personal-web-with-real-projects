@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Shippori_Mincho, Inter, Space_Mono } from "next/font/google";
-import Link from "next/link";
 import "./globals.css";
+import SiteHeader from "@/components/SiteHeader";
 
 const display = Shippori_Mincho({
   variable: "--font-display",
@@ -37,24 +37,7 @@ export default function RootLayout({
       className={`${display.variable} ${body.variable} ${utility.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <header className="border-b border-line bg-surface">
-          <nav className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-6 py-5">
-            <Link href="/" className="font-[family-name:var(--font-display)] text-xl tracking-wide">
-              AKMAL
-            </Link>
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-[family-name:var(--font-utility)] text-xs uppercase tracking-[0.15em]">
-              <Link href="/#about" className="hover:text-accent">
-                About
-              </Link>
-              <Link href="/#experience" className="hover:text-accent">
-                Experience
-              </Link>
-              <Link href="/#portfolio" className="stamp inline-block px-3 py-1.5">
-                Portfolio
-              </Link>
-            </div>
-          </nav>
-        </header>
+        <SiteHeader />
         <main className="flex-1">{children}</main>
         <footer className="border-t border-line bg-surface py-6 font-[family-name:var(--font-utility)] text-xs text-muted">
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-3 px-6 sm:flex-row sm:justify-between">

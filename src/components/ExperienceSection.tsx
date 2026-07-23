@@ -78,7 +78,7 @@ export default function ExperienceSection() {
         here honestly as client project work.
       </p>
 
-      <div role="tablist" aria-label="Experience or education" className="mt-4 flex gap-2">
+      <div role="tablist" aria-label="Experience or education" className="mt-4 flex flex-wrap gap-2">
         {tabs.map((tab) => {
           const isActive = tab === activeTab;
           return (

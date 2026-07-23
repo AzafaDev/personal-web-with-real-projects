@@ -60,7 +60,7 @@ export default function PortfolioSection() {
       <div
         role="tablist"
         aria-label="Project category"
-        className="mt-4 flex gap-2"
+        className="mt-4 flex flex-wrap gap-2"
       >
         {availableCategories.map((category) => {
           const isActive = category === activeCategory;
