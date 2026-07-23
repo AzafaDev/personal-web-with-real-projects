@@ -94,7 +94,7 @@ export default async function ProjectPage({
       </dl>
 
       <section className="mt-10">
-        <SectionHeading>The pitch, in one breath</SectionHeading>
+        <SectionHeading>Overview</SectionHeading>
         <div className="mt-3 whitespace-pre-wrap border border-line bg-ink p-5 font-[family-name:var(--font-utility)] text-sm leading-relaxed text-paper">
           {project.pitch}
         </div>

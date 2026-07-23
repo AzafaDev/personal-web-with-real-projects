@@ -57,7 +57,7 @@ export const projects: Project[] = [
     slug: "sbki-training",
     category: "client",
     title: "SBKI — Training & Certification Website",
-    eyebrow: "Client project",
+    eyebrow: "WordPress · PHP",
     dek: "A custom WordPress theme for PT SBKI, an Indonesian professional certification body (project management, finance, data, sustainability). Covers the full lifecycle: migrating an existing site from its old host into a local dev environment, building a bespoke theme against the client's brand, and redeploying to the live domain.",
     role: "Solo — AI-assisted development, deployment & migration",
     timeframe: "Jul 2026",
@@ -73,7 +73,8 @@ export const projects: Project[] = [
           "WordPress (custom theme, no page builder)",
           "Local by Flywheel for local dev",
           "Advanced Custom Fields",
-          "All in One SEO, Google Site Kit",
+          "All in One SEO",
+          "Google Site Kit",
         ],
       },
       {
@@ -123,10 +124,189 @@ export const projects: Project[] = [
     footerNote: "Case study drafted from the live site and local theme source · July 2026",
   },
   {
+    slug: "topbaja",
+    category: "client",
+    title: "TopBaja — Steel & Concrete Materials Storefront",
+    eyebrow: "WordPress · WooCommerce · Elementor",
+    dek: "A WooCommerce storefront for TopBaja (pusatbesibeton.com), a steel and concrete materials distributor — full product catalog with categories and specs (besi hollow, besi beton, profil besi, plat, baja H-beam), built from scratch on WordPress and handed off complete.",
+    role: "Solo — full setup: WordPress, WooCommerce, product catalog, Elementor design",
+    timeframe: "2026 · completed, no ongoing maintenance",
+    commits: "Full catalog build-out across multiple product categories",
+    status: "Live in production",
+    liveDemo: "https://pusatbesibeton.com/",
+    pitch:
+      "Built this one from zero rather than inheriting existing infrastructure, unlike the SBKI project: fresh WordPress install, WooCommerce configured as the product engine, and the storefront designed in Elementor against the client's brand. The catalog itself — steel and concrete construction materials across several categories, each with sizes, thickness, and length specs — is the bulk of the real content work, not just theme styling. Worth being precise about scope: checkout is WooCommerce's cart used as a product list, not a live payment gateway — orders close over WhatsApp, which matches how this segment of B2B/B2C construction-materials sales actually happens in Indonesia rather than being a gap. The site's blog, which runs a steady cadence of city/product-targeted local-SEO posts, is maintained by a dedicated SEO specialist on the client's side, not part of what I built or maintain.",
+    stack: [
+      {
+        role: "Platform",
+        items: [
+          "WordPress",
+          "WooCommerce (product catalog, cart, categories/taxonomy)",
+          "Elementor (page building, no custom theme code)",
+          "WhatsApp click-to-chat integration for order closing",
+        ],
+      },
+    ],
+    sections: [
+      {
+        heading: "Situation",
+        body: "TopBaja needed an online storefront for its steel and concrete materials business (besi hollow, besi beton, profil besi, plat, baja H-beam) — no existing site or infrastructure to inherit, a from-zero build.",
+      },
+      {
+        heading: "Task",
+        body: "Stand up a full WordPress + WooCommerce storefront with a real, browsable product catalog organized by category and spec, styled in Elementor against the client's brand, with an ordering flow that matched how the client actually closes sales — over WhatsApp, not an online payment gateway.",
+      },
+      {
+        heading: "Action",
+        body: "Installed and configured WordPress with WooCommerce as the catalog/cart engine, built the product taxonomy (Besi Hollow, Besi Beton, Profil Besi, Plat, Baja, and more), and populated it with individual product listings carrying real specs — dimensions, thickness, length — rather than generic placeholder entries. Designed the storefront pages (home, shop grid with category/sort filtering, single product pages) in Elementor. Wired WooCommerce's cart to function as an order-collection step rather than a payment checkout, with a persistent WhatsApp click-to-chat widget for closing the sale — the right call for a B2B/B2C construction-materials business where price negotiation and delivery logistics happen over chat, not a fully self-serve checkout.",
+      },
+      {
+        heading: "Result",
+        body: "Live in production at pusatbesibeton.com with a full, browsable product catalog and a WhatsApp-based ordering flow that fits how the client's sales actually close. The build is complete with no ongoing maintenance on my end — the site's local-SEO blog content is written and maintained separately by a dedicated SEO specialist on the client's side, not something I authored or manage.",
+      },
+      {
+        heading: "What it looks like",
+        body: "The shop grid with category filtering and a single product page showing size/thickness/length specs — standard WooCommerce structure, Elementor-styled to the client's brand.",
+        images: [
+          {
+            src: "/projects/topbaja/shop-grid.jpg",
+            alt: "TopBaja WooCommerce shop grid showing steel products like Besi Hollow, Pondasi Cakar Ayam, Plat Lubang, and Baja H-Beam with prices and Add to Cart buttons",
+            caption: "Shop — full product catalog with category filtering",
+          },
+          {
+            src: "/projects/topbaja/product-detail.jpg",
+            alt: "Single product page for Besi Hollow 25x50x1.6mm x 6m showing size, thickness, length specs and an Add to Cart button",
+            caption: "Product detail — specs, category breadcrumbs, add to cart",
+          },
+        ],
+      },
+    ],
+    footerNote: "Case study drafted from a live walkthrough of the deployed storefront · July 2026",
+  },
+  {
+    slug: "tokobesibeton",
+    category: "client",
+    title: "Toko Besi Beton (HiSteel) — Steel Materials Storefront",
+    eyebrow: "WordPress · WooCommerce · Elementor",
+    dek: "A WooCommerce storefront for Toko Besi Beton (HiSteel), a steel and building-materials retailer with nine branches across Java — a full product catalog (besi beton, hollow, profil, floordeck, wire mesh, roofing) built from scratch on WordPress.",
+    role: "Solo — full setup: WordPress, WooCommerce, product catalog, Elementor design",
+    timeframe: "2025 · completed, no ongoing maintenance",
+    commits: "Full catalog build-out across multiple product categories",
+    status: "Live in production",
+    liveDemo: "https://www.tokobesibeton.web.id/",
+    pitch:
+      "Same shape of build as TopBaja — fresh WordPress install, WooCommerce as the catalog engine, storefront designed in Elementor — for a different client in the same steel/construction-materials space, HiSteel, which runs nine physical branches across Java. Checkout here is the same pattern too: WooCommerce's cart works as a product list, not a live payment gateway, with orders and consultation closing over direct contact rather than self-serve checkout. SEO is handled by a dedicated specialist on the client's side, not something I built or maintain.",
+    stack: [
+      {
+        role: "Platform",
+        items: [
+          "WordPress",
+          "WooCommerce (product catalog, cart, categories/taxonomy)",
+          "Elementor (page building, no custom theme code)",
+          "WhatsApp click-to-chat integration for order closing",
+        ],
+      },
+    ],
+    sections: [
+      {
+        heading: "Situation",
+        body: "Toko Besi Beton (HiSteel), a steel and building-materials retailer with nine branch locations across Java (Bekasi, Jakarta, Tangerang, Bogor, Karawang, Cirebon, Surabaya areas), needed an online storefront for its product range — besi beton, steel profiles, hollow, floordeck, wire mesh, roofing materials — no existing site to inherit.",
+      },
+      {
+        heading: "Task",
+        body: "Stand up a full WordPress + WooCommerce storefront with a real, browsable product catalog organized by category, styled in Elementor against the client's brand, with an ordering flow matching how the client actually closes sales.",
+      },
+      {
+        heading: "Action",
+        body: "Installed and configured WordPress with WooCommerce as the catalog/cart engine, built out the product taxonomy (Besi Profil, Besi Hollow Galvanis, Floordeck/Bondek, Angkur Baja, Expanded Metal, and more), and populated it with individual listings carrying real specs and pricing rather than placeholders. Designed the storefront pages (home, shop grid with search/category filtering, single product pages) in Elementor, and wired the cart to function as an order-collection step rather than a payment checkout, with direct contact for closing the sale — the same fit-for-purpose pattern as other B2B/B2C construction-materials clients in this niche.",
+      },
+      {
+        heading: "Result",
+        body: "Live in production at tokobesibeton.web.id with a full, searchable/filterable product catalog spanning the client's nine-branch product range. The build is complete with no ongoing maintenance on my end — SEO is handled separately by a dedicated specialist on the client's side.",
+      },
+      {
+        heading: "What it looks like",
+        body: "The homepage's value-proposition section and the shop grid with search and category filtering — standard WooCommerce structure, Elementor-styled to the client's HiSteel brand.",
+        images: [
+          {
+            src: "/projects/tokobesibeton/homepage.jpg",
+            alt: "Toko Besi Beton homepage showing a red-branded hero with a HiSteel-uniformed model and a 'Kenapa Harus Belanja Di Toko Besi Beton?' value proposition list",
+            caption: "Homepage — hero, value proposition, featured products",
+          },
+          {
+            src: "/projects/tokobesibeton/shop-grid.jpg",
+            alt: "Toko Besi Beton WooCommerce shop grid with search bar, category filter, and product cards like Pipa Hitam Welded, Besi Hollow Galvanis, and Floordeck CBM Topdeck with prices",
+            caption: "Shop — full product catalog with search and category filtering",
+          },
+        ],
+      },
+    ],
+    footerNote: "Case study drafted from a live walkthrough of the deployed storefront · July 2026",
+  },
+  {
+    slug: "surya-gemilang-aluminium",
+    category: "client",
+    title: "Surya Gemilang Aluminium — Company Profile",
+    eyebrow: "WordPress · Elementor",
+    dek: "A company profile site for Surya Gemilang Aluminium (PT Makmur Madani Mulia), a Bekasi-based aluminum installer (kusen, pintu, jendela) operating since 2009 — built on WordPress with Elementor, product/gallery pages, and WhatsApp-based contact.",
+    role: "Solo — WordPress & Elementor build",
+    timeframe: "2026",
+    commits: "Full site build — Home, About, Products, Gallery, Blog",
+    status: "Live in production",
+    liveDemo: "https://suryagemilangaluminium.com/",
+    pitch:
+      "A straightforward company profile build on WordPress with Elementor — no custom theme code, no e-commerce. The client sells aluminum doors, windows, and frames (kusen, pintu, jendela) and has been operating since 2009; the site's job is to establish credibility and route leads to WhatsApp, not to sell online. Worth being precise about scope: SEO and Google Ads are run by a dedicated specialist on the client's side, not something I built or maintain.",
+    stack: [
+      {
+        role: "Platform",
+        items: [
+          "WordPress",
+          "Elementor (page building, no custom theme code)",
+          "WhatsApp click-to-chat for lead contact",
+        ],
+      },
+    ],
+    sections: [
+      {
+        heading: "Situation",
+        body: "Surya Gemilang Aluminium, a Bekasi-based aluminum installer (doors, windows, frames) operating since 2009, needed a company profile site to establish credibility and convert visitors into WhatsApp leads.",
+      },
+      {
+        heading: "Task",
+        body: "Build a company profile site on WordPress covering Home, About, Products, Gallery, and Blog, styled in Elementor against the client's brand, with clear WhatsApp-based contact paths.",
+      },
+      {
+        heading: "Action",
+        body: "Set up WordPress and built the site page-by-page in Elementor: a homepage covering the four key differentiators (experience since 2009, quality, pricing, professional team), a product section split into doors/windows/frames, a gallery of completed projects (butterfly windows, sliding windows, curved windows, shower enclosures) with client testimonials, and WhatsApp click-to-chat links wired per project category rather than a single generic contact button.",
+      },
+      {
+        heading: "Result",
+        body: "Live in production at suryagemilangaluminium.com. SEO and Google Ads are handled by a dedicated specialist on the client's side — outside the scope of this build.",
+      },
+      {
+        heading: "What it looks like",
+        body: "Homepage hero with the WhatsApp-led CTA, and the gallery section showing completed installation work filterable by category (Pintu, Jendela, Kusen, Workshop).",
+        images: [
+          {
+            src: "/projects/surya-gemilang-aluminium/homepage-hero.jpg",
+            alt: "Surya Gemilang Aluminium homepage hero with 'Aluminium Berkualitas, Harga Terjangkau' headline and a Konsultasi Gratis CTA button",
+            caption: "Homepage — hero, tagline, WhatsApp-led CTA",
+          },
+          {
+            src: "/projects/surya-gemilang-aluminium/gallery.jpg",
+            alt: "Gallery section titled Galeri Kami with filter tabs for Pintu, Jendela, Kusen, Workshop, and Lain-lain, showing completed installation photos",
+            caption: "Gallery — completed projects, filterable by category",
+          },
+        ],
+      },
+    ],
+    footerNote: "Case study drafted from a live walkthrough of the deployed site · July 2026",
+  },
+  {
     slug: "laundry-app",
     category: "no-client",
     title: "Laundry Management Platform",
-    eyebrow: "Portfolio case study",
+    eyebrow: "Go · React · TypeScript",
     dek: "A full-stack, multi-outlet laundry operations system — order pipeline, driver dispatch, payments, attendance, and admin reporting — built as a from-scratch Go backend paired with a React/TypeScript frontend, with real fixes for race conditions and security gaps found along the way.",
     role: "Solo — backend & frontend",
     timeframe: "Jul 9 – Jul 19, 2026",
@@ -141,19 +321,26 @@ export const projects: Project[] = [
       {
         role: "Backend",
         items: [
-          "Go 1.26 + Gin",
+          "Go 1.26",
+          "Gin",
           "PostgreSQL via pgx/v5 — no ORM",
           "sqlc — raw SQL in, typed Go out",
           "golang-migrate for schema",
-          "JWT (HS256) in httpOnly cookies, bcrypt",
+          "JWT (HS256) in httpOnly cookies",
+          "bcrypt",
           "Server-Sent Events (custom pub/sub)",
-          "Midtrans, Resend, Cloudinary, OpenCage",
+          "Midtrans",
+          "Resend",
+          "Cloudinary",
+          "OpenCage",
         ],
       },
       {
         role: "Frontend",
         items: [
-          "React 19 + TypeScript, Vite",
+          "React 19",
+          "TypeScript",
+          "Vite",
           "React Router v7",
           "TanStack Query for server state",
           "React Hook Form + Zod",
@@ -268,19 +455,21 @@ export const projects: Project[] = [
     title: "Company Profile CMS — Payload + Next.js",
     eyebrow: "Bootcamp challenge",
     dek: "A company profile site with a headless CMS backend (Payload) for managing blog posts and media — Home, About, Services, Teams, Blog, and a public auth-gated blog-creation flow, all editable through an admin panel or the site's own Login/Create Blog pages instead of hardcoded content.",
-    role: "Solo — assigned coursework, revived and redeployed independently",
+    role: "Solo — individual bootcamp assignment, built from scratch, later revived and redeployed independently",
     timeframe: "2026 (bootcamp) · redeployed Jul 2026",
     commits: "32 commits",
     status: "Live in production",
-    liveDemo: "https://company-profile-challange-nu9r-8b3zjb4bz.vercel.app/",
+    liveDemo: "https://company-profile-challange.vercel.app/",
     repo: "https://github.com/AzafaDev/company-profile-challange",
     pitch:
-      "Worth being upfront: this was a set code challenge from Purwadhika's bootcamp, not a project I conceived myself — the brief and scope were given, not chosen. What's mine is everything after the assignment: the original deployment and database had been torn down and sat dormant, so I brought it back — diagnosed a Next.js/Payload peer-dependency conflict blocking install, removed a dead dependency that was silently causing it, provisioned a fresh Postgres database, fixed a real DB-connectivity failure that turned out to be a Neon account/project-level issue rather than a code bug, reseeded demo content, and then checked the rebuilt site against the original assignment brief itself — which turned up a real gap: the spec required a public-facing Login and Create Blog page, and the live site only had Payload's own admin panel. Built both from scratch against Payload's REST auth before calling it done.",
+      "Worth being upfront: the brief was a set code challenge from Purwadhika's bootcamp, not scope I picked myself — but this was an individual assignment, and the build itself (Payload schema, page structure, CMS wiring, styling) is mine end to end, same as the rest of this portfolio's non-team projects. Separately, and later: the original deployment and database had been torn down and sat dormant, so I brought it back — diagnosed a Next.js/Payload peer-dependency conflict blocking install, removed a dead dependency that was silently causing it, provisioned a fresh Postgres database, fixed a real DB-connectivity failure that turned out to be a Neon account/project-level issue rather than a code bug, reseeded demo content, and then checked the rebuilt site against the original assignment brief itself — which turned up a real gap: the spec required a public-facing Login and Create Blog page, and the live site only had Payload's own admin panel. Built both from scratch against Payload's REST auth before calling it done.",
     stack: [
       {
         role: "Framework & CMS",
         items: [
-          "Next.js 16 (App Router) + React 19 + TypeScript",
+          "Next.js 16 (App Router)",
+          "React 19",
+          "TypeScript",
           "Payload CMS 3 — admin panel, REST + GraphQL API",
           "PostgreSQL via @payloadcms/db-postgres",
           "Lexical rich-text editor",
@@ -289,9 +478,11 @@ export const projects: Project[] = [
       {
         role: "Infra & styling",
         items: [
-          "Vercel (hosting) + Vercel Blob (media storage)",
+          "Vercel (hosting)",
+          "Vercel Blob (media storage)",
           "Neon (managed Postgres)",
-          "Tailwind CSS + DaisyUI",
+          "Tailwind CSS",
+          "DaisyUI",
           "Zustand for client state",
         ],
       },
@@ -299,11 +490,11 @@ export const projects: Project[] = [
     sections: [
       {
         heading: "Situation",
-        body: "This was assigned coursework from Purwadhika — a company profile build using Payload CMS on Next.js, not a project I picked myself. By the time I revisited it, the original Vercel deployment and its database had both been deleted, leaving a repo that no longer ran: `npm install` failed outright, and the README was still the unedited create-next-app default.",
+        body: "This was an individual assignment from Purwadhika — a company profile build using Payload CMS on Next.js against a fixed spec (seven required pages, CMS-backed blog, public auth), but built solo from an empty repo, not scaffolded or handed to me. Long after finishing it, I came back to find the original Vercel deployment and its database had both been deleted, leaving a repo that no longer ran: `npm install` failed outright, and the README was still the unedited create-next-app default.",
       },
       {
         heading: "Task",
-        body: "Get the project running locally, fix whatever was actually broken rather than papering over it, provision a real database, verify the rebuilt site actually satisfies the original assignment brief, and get it back to a live, checkable deployment with working demo content — the kind of state a repo should be in before anyone treats it as a portfolio piece.",
+        body: "Get the project running locally again, fix whatever was actually broken rather than papering over it, provision a real database, verify the original build actually satisfies the assignment brief, and get it back to a live, checkable deployment with working demo content — the kind of state a repo should be in before anyone treats it as a portfolio piece.",
       },
       {
         heading: "Action",
@@ -311,13 +502,195 @@ export const projects: Project[] = [
       },
       {
         heading: "Result",
-        body: "Live and checkable at the URL above, with a working admin panel, a populated blog, and both required auth pages now present rather than a bare scaffold or a partially-satisfied brief. The honest scope here: the CMS structure, page layout, and original build were bootcamp-assigned work, not self-directed design — what I added was reviving a dead repo (fixed dependency conflicts, undocumented env vars, a real infra failure) and closing a real gap against the assignment brief itself, then shipping it back to production rather than leaving it as a broken or incomplete artifact.",
+        body: "Live and checkable at the URL above, with a working admin panel, a populated blog, and both required auth pages now present rather than a bare scaffold or a partially-satisfied brief. Two layers of work here, both mine: the original build (Payload schema, page implementation, CMS wiring) done solo against the assignment brief, and later, independently, reviving a dead repo (dependency conflicts, undocumented env vars, a real infra failure) and closing a real gap I found by re-checking my own build against the brief, then shipping it back to production rather than leaving it as a broken or incomplete artifact.",
+      },
+      {
+        heading: "What it looks like",
+        body: "A coffee-brand company profile theme (Janji Jiwa) with a CMS-backed blog — posts, authors, publish dates, and topic filters (Story, Tips, News, Menu) all pulled from Payload rather than hardcoded.",
+        images: [
+          {
+            src: "/projects/company-profile-payload/homepage.jpg",
+            alt: "Company profile homepage for Janji Jiwa coffee brand with a 900+ outlets badge and a featured drink image",
+            caption: "Homepage — hero, outlet count, rating badge",
+          },
+          {
+            src: "/projects/company-profile-payload/blog-listing.jpg",
+            alt: "Blog listing page titled Explore Our Soul with a topic filter sidebar and CMS-driven post cards",
+            caption: "Blog — CMS-driven posts, topic filter sidebar",
+          },
+        ],
       },
     ],
     footerNote: "Case study drafted from the repo, its README (rewritten during this work), and a live redeploy walkthrough · July 2026",
+  },
+  {
+    slug: "kinetix-events",
+    category: "no-client",
+    title: "Kinetix Events — Event Ticketing Platform",
+    eyebrow: "Bootcamp mini-project · Express · Prisma · React",
+    dek: "A full-stack event ticketing platform — event discovery, tiered tickets, a transaction flow with payment-proof upload, voucher/coupon discounts, a points/referral system, event reviews, and an organizer dashboard — built as a Purwadhika bootcamp mini-project with a teammate.",
+    role: "Team of 2 — I led backend + most of the frontend, teammate contributed a smaller share",
+    timeframe: "2026 (bootcamp mini-project)",
+    commits: "160 commits total",
+    status: "Live — full MVP scope shipped",
+    liveDemo: "https://kinetix-events.vercel.app/",
+    repo: "https://github.com/AzafaDev/mini-project",
+    pitch:
+      "This was a scoped bootcamp mini-project done with one teammate, not solo — worth being upfront about that rather than presenting it as an individual build. I carried backend and most of the frontend; my teammate contributed a smaller share. The MVP brief specified event discovery/creation, a full transaction lifecycle with vouchers/coupons/points, a referral program, event reviews, and an organizer dashboard — all of it shipped and is live and checkable on the deployed app: the event detail page shows aggregate ratings and review counts pulled from real data, and organizer profiles roll those up across all their events.",
+    stack: [
+      {
+        role: "Backend",
+        items: [
+          "Node.js + Express (TypeScript)",
+          "Prisma ORM 7 (PostgreSQL, @prisma/adapter-pg)",
+          "JWT auth in httpOnly cookies",
+          "bcrypt",
+          "Zod validation",
+          "Cloudinary (image uploads)",
+          "Resend (transactional email, Handlebars templates)",
+          "express-rate-limit",
+          "Vercel serverless entry (api/index.ts)",
+        ],
+      },
+      {
+        role: "Frontend",
+        items: [
+          "React 19 + Vite",
+          "Tailwind CSS 4",
+          "Zustand (state)",
+          "React Router v7",
+          "Recharts (dashboard charts)",
+          "Formik + Yup (forms)",
+          "Framer Motion",
+        ],
+      },
+    ],
+    sections: [
+      {
+        heading: "Situation",
+        body: "A Purwadhika bootcamp mini-project with a fixed MVP brief: build an event ticketing platform covering discovery/creation, a full transaction lifecycle (payment proof, expiry, auto-cancellation, rollback), a discount/loyalty system (vouchers, coupons, points, referrals), event reviews and ratings, and an organizer dashboard. Done as a team of two rather than solo.",
+      },
+      {
+        heading: "Task",
+        body: "Deliver as much of the spec'd feature set as possible against the bootcamp's scoring rubric, working across a shared backend and frontend with a teammate — I took backend plus the bulk of the frontend.",
+      },
+      {
+        heading: "Action",
+        body: "Backend: Express + Prisma 7 over PostgreSQL, JWT in httpOnly cookies, Zod validation, Cloudinary for event images and payment-proof uploads, Resend for transactional email. Modules cover auth (register/login/verify/reset, referral codes), events (CRUD, filters, ticket tiers, plus reviews nested under the events module — create/update/delete review, per-event rating aggregation, organizer-wide rating rollup), transactions (create → upload proof → organizer accept/reject, with a 2-hour payment window and 3-day auto-cancel), discount (event vouchers + system coupons), and points (referral rewards, redemption). Frontend: React 19 + Vite, Zustand for auth/event/transaction state, Formik + Yup for forms, Recharts for the organizer dashboard's revenue/sales visualizations, a dedicated review modal and review section on the event detail page. Deployed as a single Vercel project — static frontend plus the Express app running as a serverless function.",
+      },
+      {
+        heading: "Result",
+        body: "Live and checkable at the URL above. The full MVP brief shipped: discovery/browsing/search, event creation with tiered pricing, the full transaction state machine with rollback, vouchers/coupons/points/referrals, event reviews with aggregate ratings surfaced on both event and organizer pages, and an organizer dashboard with attendee lists and revenue charts. One honest gap: there's a `vitest` test script wired up in package.json but zero test files in the repo — untested rather than broken. And this was a two-person build, not solo, which the README's framing glosses over but this one doesn't.",
+      },
+      {
+        heading: "What it looks like",
+        body: "The public discovery flow — a hero search/filter bar, curated event cards, and an event detail page showing live seat capacity, ticket tiers, and aggregate ratings pulled from real review data.",
+        images: [
+          {
+            src: "/projects/kinetix-events/homepage.jpg",
+            alt: "Kinetix Events homepage with an 'Architect Your Moment' hero, a search/filter bar, and category chips for Music, Conference, Workshop, Seminar, Sports",
+            caption: "Homepage — hero search, category filters, curated events",
+          },
+          {
+            src: "/projects/kinetix-events/event-detail.jpg",
+            alt: "Jakarta Music Festival 2025 event detail page showing a 5.0 rating from 2 reviews, seat capacity 3497/3500, organizer rating 4.3 from 4 reviews, and VIP/General ticket tiers",
+            caption: "Event detail — capacity, ticket tiers, and review-driven ratings",
+          },
+        ],
+      },
+    ],
+    footerNote: "Case study drafted from the repo source, its README, and a live check of the deployed app · July 2026",
+  },
+  {
+    slug: "freshpress-laundry",
+    category: "no-client",
+    title: "FreshPress Laundry — Driver, Worker & Attendance",
+    eyebrow: "Bootcamp final project · Express · Prisma · Next.js",
+    dek: "A five-role laundry marketplace (customer, super admin, outlet admin, worker, driver) built as a three-person Purwadhika final project, with geolocation-based outlet assignment, a full order pipeline, and a bypass-approval workflow for mismatched items. My scope: driver dispatch, worker station processing, and staff attendance — plus a self-scoped employee-auth system the assignment brief didn't originally call for.",
+    role: "Team of 3 — I owned Feature 3 (driver management, worker management, attendance) and employee auth",
+    timeframe: "May – Jul 2026 (bootcamp final project)",
+    commits: "223 of 451 commits",
+    status: "Live in production",
+    liveDemo: "https://freshpress-laundry.vercel.app/",
+    repo: "https://github.com/finalprojectpwdk-cloud/Laundry-App---FreshPress-Laundry",
+    pitch:
+      "Worth being upfront about the structure: this is a three-person Purwadhika final project with a fixed point-weighted brief (100 points split across features), not a solo build — the repo has 451 commits from three contributors across dozens of feature branches. The assignment split the app into three scored feature blocks and assigned one to each teammate; mine was Feature 3 — driver/worker task management and staff attendance — worth the largest single point allocation in the brief. One thing that wasn't in the original spec at all: employee authentication (login, sessions, role-gated routing for outlet admin/worker/driver/super admin) didn't belong to anyone's assigned feature by the letter of the brief, so I built it myself rather than leaving a gap the team would hit later. The honest scope here is that block, not the whole app — homepage, customer ordering/payment, and admin/outlet management were built by teammates.",
+    stack: [
+      {
+        role: "Backend",
+        items: [
+          "Node.js + Express 5 (TypeScript)",
+          "Prisma 7 ORM over PostgreSQL (Neon serverless)",
+          "JWT auth in httpOnly cookies",
+          "bcrypt",
+          "Zod validation",
+          "Socket.IO (real-time task/notification events)",
+          "node-cron (attendance sweep, auto-completion)",
+          "Cloudinary (uploads), Resend (email), Midtrans (payments)",
+          "OpenCage (geocoding), geolib (distance/outlet matching)",
+        ],
+      },
+      {
+        role: "Frontend",
+        items: [
+          "Next.js 16 (App Router)",
+          "React 19",
+          "TanStack Query",
+          "Zustand",
+          "React Hook Form + Zod",
+          "Leaflet / React-Leaflet",
+          "Recharts (reports)",
+          "Tailwind CSS 4",
+        ],
+      },
+    ],
+    sections: [
+      {
+        heading: "Situation",
+        body: "A Purwadhika bootcamp final project, scoped for a team of three: a five-role laundry marketplace (customer, super admin, outlet admin, worker, driver) with geolocation-based outlet assignment, a full order pipeline from pickup to delivery, and a per-station bypass-approval workflow when a worker's re-counted item quantities don't match the previous station. The brief split the build into point-weighted feature blocks, one per teammate.",
+      },
+      {
+        heading: "Task",
+        body: "My assigned block (Feature 3) was driver task management, worker station processing, and staff attendance — plus, once it became clear no one's assigned feature covered it by the letter of the brief, employee authentication and role-gated routing for the four non-customer roles.",
+      },
+      {
+        heading: "Action",
+        body: "Built the driver dashboard (pickup/delivery task list, one-active-task-at-a-time constraint, task history) and the worker station dashboard (per-station job queue, mandatory item re-count on intake, bypass-request flow that routes to outlet admin for approval before a station can proceed). Attendance: geofenced check-in/check-out gating dashboard access — a worker or driver can't see their tasks until they've checked in for their shift — plus a cron-driven absence sweep and an attendance report for outlet admins. Employee auth: JWT-in-httpOnly-cookie sessions, role-based route guards across outlet admin/worker/driver/super admin, and login/session handling shared by the whole team's dashboards, since none of the three assigned feature blocks technically owned it.",
+      },
+      {
+        heading: "Result",
+        body: "Live in production at freshpress-laundry.vercel.app, with 223 of the repo's 451 commits under my name across two authoring identities. The honest caveat: this is one-third of a team build, not a solo project — the parts outside my scope (customer ordering/payment, outlet-admin order/master-data management, the public site) were built by teammates, and I'm not claiming credit for them here.",
+      },
+      {
+        heading: "What it looks like",
+        body: "Driver and worker dashboards both gate task visibility behind a daily check-in — the attendance piece that ties Feature 3 together, screenshotted from live demo accounts on the deployed app.",
+        images: [
+          {
+            src: "/projects/freshpress-laundry/driver-dashboard.jpg",
+            alt: "Driver dashboard showing Morning shift 08:00-16:00, Pickup/Delivery tabs, and a locked 'Check-in dulu' panel gating task visibility",
+            caption: "Driver dashboard — shift info, attendance-gated task list",
+          },
+          {
+            src: "/projects/freshpress-laundry/worker-dashboard.jpg",
+            alt: "Washing Worker dashboard showing Station Kamu section with a locked 'Check-in dulu' panel and bottom nav for Beranda, Absensi, Station, Riwayat",
+            caption: "Worker dashboard — station queue, attendance-gated access",
+          },
+        ],
+      },
+    ],
+    footerNote: "Case study drafted from the repo's git history, the assignment brief, and a live walkthrough with seeded demo accounts · July 2026",
   },
 ];
 
 export function getProject(slug: string) {
   return projects.find((p) => p.slug === slug);
+}
+
+export function getPreviewImage(project: Project): ProjectImage | undefined {
+  for (const section of project.sections) {
+    if (section.images && section.images.length > 0) {
+      return section.images[0];
+    }
+  }
+  return undefined;
 }
